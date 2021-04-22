@@ -7,10 +7,10 @@ const app = express();
 // Configuration
 const PORT = process.env.PORT || '3000';
 const API_SERVICE_URL = process.env.API_SERVICE_URL || "https://google.com";
-const CHANGE_ORIGIN = Boolean(process.env.CHANGE_ORIGIN);
+const CHANGE_ORIGIN = process.env.CHANGE_ORIGIN === 'true';
 
 //Debug
-app.use(morgan('dev'));
+// app.use(morgan('dev'));
 
 app.get('/info', (req, res, next) => {
     res.send('This is a proxy service which proxies to Billing and Account APIs.');
