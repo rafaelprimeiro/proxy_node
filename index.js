@@ -7,7 +7,7 @@ const app = express();
 // Configuration
 const PORT = process.env.PORT || '3000';
 const API_SERVICE_URL = process.env.API_SERVICE_URL || "https://google.com";
-const CHANGE_ORIGIN = Boolean(process.env.CHANGE_ORIGIN) || true;
+const CHANGE_ORIGIN = Boolean(process.env.CHANGE_ORIGIN);
 
 //Debug
 app.use(morgan('dev'));
